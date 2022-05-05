@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FORMULARIO MASCOTAS</title>
+	<style>
+		body{
+			background: black;
+			font-family: Calibri;
+			color:red;
+		}
+		div{
+			background: white;
+			width: 550px;
+			margin: 20px;
+			padding: 20px;
+
+		}
+		h1{
+			color: black;
+			font-size: 35px;
+			font-family: ;
+		}
+
+		img{
+			float: right;
+		}
+
+
+		.btn, .btn2{
+			background-color: red;
+  			border: none;
+  			color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			font-size: 16px;
+  			cursor: pointer;
+  			width: 100%
+
+		}
+		.btn:hover, .btn2:hover{
+			background-color: black;
+			color: white;
+		}
+
+		#cadenaJSON{
+			width:95%;
+		}
+	</style>
+</head>
+
+<body>
+<div class="formularioderegistro">
+	<img src="logo_cat.png" height="450px">
+	<h1>MASCOTAS</h1><br>
+	<h2>FORMULARIO DE REGISTRO</h2><br>
+
+		<form action="" class="formulario" id="formulario" name="formulario">
+
+				<label for="nombreM">Nombre de la mascota:</label><br>
+  				<input type="text" id="nombreM" name="nombreM"><br><br>
+
+  				<label for="raza">Raza:</label><br>
+  				<input type="text" id="raza" name="raza"><br><br>
+
+  				<label for="color">Color:</label><br>
+  				<input type="text" id="color" name="color"><br><br>
+
+  				<label for="peso">Peso:</label><br>
+  				<input type="number" id="peso" name="peso"><br><br>
+
+  				<label for="nombreP">Nombre del propietario:</label><br>
+  				<input type="text" id="nombreP" name="nombreP" ><br><br><br>
+
+  				
+			<button type="button" class="btn" id="btnAgregarMascota">Enviar</button>
+		</form>
+</div>
+
+<div class="mostrarMascota">
+	<h2>MASCOTA REGISTRADA EN NOTACIÓN JSON:</h2>
+	<p id="mascotaRegistrada"></p>
+</div>
+
+<div class="formulario2">
+	<form action="" class="formulario2" id="formulario2" name="formulario2">
+
+		<label for="nombreM">JSON a Javascript</label><br>
+		  <input type="text" id="cadenaJSON" name="cadenaJSON" placeholder="Introduzca cadena en formato JSON"><br><br>
+
+		<button type="button2" class="btn2" id="btnAgregarMascota2">Enviar</button>
+	</form>
+</div>
+
+<div class="mostrarMascota2">
+	<h2>MASCOTA REGISTRADA EN OBJETO DE JAVASCRIPT:</h2>
+	<p id="mascotaRegistrada2"></p>
+</div>
+
+	<!--<script src='objeto.js'></script>
+	<script src='logica.js'></script>
+	<script src='formulario2.js'></script>-->
+
+	<script src='script.js'></script>
+</body>
+</html>
+
+
+
+<!--ORIGINAL
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FORMULARIO MASCOTAS</title>
+	<style>
+		body{
+			background: black;
+			font-family: Calibri;
+			color:red;
+		}
+		div{
+			background: white;
+			width: 500px;
+			margin: 20px;
+			padding: 20px;
+
+		}
+		h1{
+			color: black;
+			font-size: 35px;
+			font-family: ;
+		}
+
+		img{
+			float: right;
+		}
+
+
+		.btn{
+			background-color: red;
+  			border: none;
+  			color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			font-size: 16px;
+  			cursor: pointer;
+  			width: 100%
+
+		}
+		.btn:hover{
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+<div class="formularioderegistro">
+	<img src="logo_cat.png" height="450px">
+	<h1>MASCOTAS</h1><br>
+	<h2>FORMULARIO DE REGISTRO</h2><br>
+
+		<form action="" class="formulario" id="formulario" name="formulario">
+
+				<label for="nombreM">Nombre de la mascota:</label><br>
+  				<input type="text" id="nombreM" name="nombreM"><br><br>
+
+  				<label for="raza">Raza:</label><br>
+  				<input type="text" id="raza" name="raza"><br><br>
+
+  				<label for="color">Color:</label><br>
+  				<input type="text" id="color" name="color"><br><br>
+
+  				<label for="peso">Peso:</label><br>
+  				<input type="number" id="peso" name="peso"><br><br>
+
+  				<label for="nombreP">Nombre del propietario:</label><br>
+  				<input type="text" id="nombreP" name="nombreP" ><br><br><br>
+
+  				
+			<button type="button" class="btn" onclick="getData()">Enviar</button>
+		</form>
+	</div>
+
+	<script src='formularioMascotas.js'></script>
+</body>
+</html>
+-->
