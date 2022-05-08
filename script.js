@@ -26,7 +26,7 @@ function agregarMascota(nombreM,raza,color,peso,nombreP){
 		peso : peso,
 		nombreP : nombreP
 	};
-        console.log(nuevaMascota);
+        console.log(typeof nuevaMascota);
 
 		mascotasLista.push(nuevaMascota);
         
@@ -39,10 +39,12 @@ function agregarMascota(nombreM,raza,color,peso,nombreP){
 
 
 //Tratando de convertir JSON a objeto de JS con método parse
-document.querySelector('#btnAgregarMascota2').addEventListener('click', convertirAobjJS);
+// document.querySelector('#btnAgregarMascota2').addEventListener('click', convertirAobjJS);
 
 function convertirAobjJS(){
     var cadenaJSON  = document.querySelector('#cadenaJSON').value;
+
+	console.info(cadenaJSON);
 
     var objetoJS = JSON.parse(cadenaJSON);
     
@@ -51,5 +53,33 @@ function convertirAobjJS(){
        
 };
 
+/* ########### CAMBIOS ########### */
 
+document.querySelector('#btnAgregarMascota2').addEventListener('click', (evento) => {
 
+	evento.preventDefault(); // Evitamos refrescar el formulario.
+
+	// Convirtiendo a STRING
+    var cadenaJSON  = JSON.parse(document.querySelector('#cadenaJSON').value);
+
+	const myObject = {
+		nombreM : cadenaJSON.nombreM,
+		raza : cadenaJSON.raza,
+		color : cadenaJSON.color,
+		peso : cadenaJSON.peso,
+		nombreP : cadenaJSON.nombreP
+	}
+
+	console.log(myObject);
+	console.log(typeof myObject);
+
+    document.getElementById('mascotaRegistrada2').innerHTML = `
+		{
+			nombreM: '${myObject.nombreM}',
+			raza : '${cadenaJSON.raza}',
+			color : '${cadenaJSON.color}',
+			peso : ' '${cadenaJSON.peso}',
+			nombreP : '${cadenaJSON.nombreP}'
+		}
+	`;
+});
